@@ -1,0 +1,18 @@
+import random
+def enemy_talk(name , phase):
+"""determines the dialogue"""
+    if phase == "intro":
+        lines = ["You won't best me!","Let's get this started!","Say your prayers!","Surprised to see me?","This will hurt a lot.","You will meet with God.","The boss is counting on me to get you.","You're going down!","Time for a swift clean-up."]
+    index = random.randint(1, len(lines) - 1)
+    speech = enemy_name + " " + lines[index]
+    return speech
+
+def fight(enemy_name,enemy_level,player_name):
+    print(player_name, "encountered a", enemy_level, enemy_name + "!")
+    print(enemy_talk(enemy_name,intro))
+    enemy_health = (enemy_level * 3) * (enemy_level * 5)
+    player_health = 100
+    while player_health > 0 and enemy_health > 0:
+        print(player_name + "'s health:" , player_health )
+
+fight("Flunky",5,"Batt Engarde")
