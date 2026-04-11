@@ -16,13 +16,15 @@ def fight(enemy_name,enemy_level,player_name):
     while player_health > 0 and enemy_health > 0:
         print(player_name + "'s health:" , player_health)
         print(enemy_name + "'s health:" , enemy_health)
+        
+        
 
 print("Welcome to the arena!")
-name = input("What is your name?")
+name = input("What is your name? ")
 while True:
-    if input("Would you like to continue fighting?") == "No":
+    if input("Would you like to continue fighting? ") == "No":
         print("See you next time!")
         break
-    enemy = input("What enemy would you like to battle?")
-    enemy_level = input("What level is this enemy?")
+    enemy = input("What enemy would you like to battle? ")
+    enemy_level = input("What level is this enemy? ")
     fight(enemy,enemy_level,name)
